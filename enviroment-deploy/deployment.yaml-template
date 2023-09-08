@@ -15,6 +15,6 @@ spec:
     spec: 
       containers:
       - name: example
-        image: tarmizy/testing-deployment:versi.TAG
+        image: tarmizy/testing-deployment:TAG
         ports:
         - containerPort: 80
