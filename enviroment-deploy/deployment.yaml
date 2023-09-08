@@ -1,0 +1,20 @@
+apiVersion: apps/14
+kind: Deployment
+metadata:
+  name: example-deployment
+  namespaces: testing
+spec:
+  selector:
+    matchLabels:
+      app: example
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: example
+    spec: 
+      containers:
+      - name: example
+        image: tarmizy/testing-deployment:14
+        ports:
+        - containerPort: 80
