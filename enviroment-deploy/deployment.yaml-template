@@ -1,4 +1,4 @@
-apiVersion: apps/14
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: example-deployment
@@ -15,6 +15,6 @@ spec:
     spec: 
       containers:
       - name: example
-        image: tarmizy/testing-deployment:TAG
+        image: tarmizy/testing-deployment:versi.TAG
         ports:
         - containerPort: 80
