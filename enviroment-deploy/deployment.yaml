@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: example-deployment
-  namespaces: testing
+  # namespaces: testing
 spec:
   selector:
     matchLabels:
