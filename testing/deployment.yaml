@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+  name: example-deployment
+  # namespaces: testing
+spec:
+  selector:
+    matchLabels:
+      app: example
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: example
+    spec: 
+      containers:
+      - name: example
+        image: tarmizy/test
+        ports:
+        - containerPort: 80
