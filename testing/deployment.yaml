@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+   argocd-image-updater.argoproj.io/image-list: tarmizy/test
+   argocd-image-updater.argoproj.io/tarmizy/test.update-strategy: digest
   name: example-deployment
   # namespaces: testing
 spec:
