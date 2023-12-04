@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-  argocd-image-updater.argoproj.io/image-list: test=tarmizy/test
+   argocd-image-updater.argoproj.io/image-list: test=tarmizy/test
    argocd-image-updater.argoproj.io/test.update-strategy: digest
    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-  name: example-deployment
+  name: sample-app
   # namespaces: testing
 spec:
   selector:
@@ -18,7 +18,7 @@ spec:
         app.kubernetes.io/instance: sample-app
     spec: 
       containers:
-      - name: example
+      - name: sample-app
         image: tarmizy/test
         ports:
         - containerPort: 80
