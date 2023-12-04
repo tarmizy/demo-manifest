@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   annotations:
   argocd-image-updater.argoproj.io/image-list: test=tarmizy/test
-  #  argocd-image-updater.argoproj.io/image-list: tarmizy/test
    argocd-image-updater.argoproj.io/test.update-strategy: digest
    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: example-deployment
