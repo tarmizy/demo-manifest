@@ -15,6 +15,6 @@ spec:
     spec: 
       containers:
       - name: sample-app
-        image: tarmizy/test
+        image: tarmizy/test:latest
         ports:
         - containerPort: 80
