@@ -4,6 +4,12 @@ metadata:
   name: sample-app
   # namespaces: testing
 spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+
   selector:
     matchLabels:
       app.kubernetes.io/instance: sample-app
