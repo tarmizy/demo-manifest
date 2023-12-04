@@ -10,12 +10,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: example
+      app.kubernetes.io/instance: sample-app
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: example
+        app.kubernetes.io/instance: sample-app
     spec: 
       containers:
       - name: example
