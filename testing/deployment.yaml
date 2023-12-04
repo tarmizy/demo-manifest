@@ -2,16 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-   argocd-image-updater.argoproj.io/image-list: tarmizy/test
-   argocd-image-updater.argoproj.io/tarmizy/test.update-strategy: digest
+   argocd-image-updater.argoproj.io/image-list: demo=tarmizy/test  #Write repository name
+   argocd-image-updater.argoproj.io/demo.update-strategy: digest #There are several ways to update the image, but I'm using digest
    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+   argocd-image-updater.argoproj.io/write-back-method: git  # We don't need the secret as mentioned in argocd doc because we already set it up via argocd console if you're using the same git repo.
+   argocd-image-updater.argoproj.io/git-branch: main 
+   argocd-image-updater.argoproj.io/demo.force-update: "true"
   name: sample-app
   # namespaces: testing
 spec:
   selector:
     matchLabels:
       app.kubernetes.io/instance: sample-app
-  replicas: 2 # tells deployment to run 2 pods matching the template
+  replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
