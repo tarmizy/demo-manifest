@@ -4,6 +4,7 @@ metadata:
   annotations:
    argocd-image-updater.argoproj.io/image-list: tarmizy/test
    argocd-image-updater.argoproj.io/tarmizy/test.update-strategy: digest
+   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: example-deployment
   # namespaces: testing
 spec:
