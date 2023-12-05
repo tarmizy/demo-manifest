@@ -22,5 +22,6 @@ spec:
       containers:
       - name: demo-app
         image: tarmizy/test:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
