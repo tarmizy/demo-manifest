@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-app
+  name: demo-app
   # namespaces: testing
 spec:
   strategy:
@@ -12,15 +12,15 @@ spec:
 
   selector:
     matchLabels:
-      app.kubernetes.io/instance: sample-app
+      app.kubernetes.io/instance: demo-app
   replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app.kubernetes.io/instance: sample-app
+        app.kubernetes.io/instance: demo-app
     spec: 
       containers:
-      - name: sample-app
+      - name: demo-app
         image: tarmizy/test:latest
         ports:
         - containerPort: 80
