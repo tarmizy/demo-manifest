@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - docker.io/tarmizy/test@sha256:3847ab203b048a1ec9534c0638662892fb7fddc4747ec1a23566a20456c287b7

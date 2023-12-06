@@ -21,7 +21,7 @@ spec:
     spec: 
       containers:
       - name: demo-app
-        image: tarmizy/test:demo
+        image: docker.io/tarmizy/test:demo 
         imagePullPolicy: Always
         env:
           - name: testing
