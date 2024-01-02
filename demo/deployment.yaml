@@ -21,7 +21,7 @@ spec:
     spec: 
       containers:
       - name: demo-app
-        image: docker.io/tarmizy/test:demo 
+        image: 744838517157.dkr.ecr.ap-southeast-1.amazonaws.com/testing:demo
         imagePullPolicy: Always
         env:
           - name: testing
